@@ -16,21 +16,170 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
+
+				<!-- Intro slide -->
 				<section>
 					<h2>GeneNet VR: Large Biological Networks in Virtual Reality Using Inexpensive Hardware</h2>
 					<h5 style="font-weight: normal;">Álvaro Martínez Fernández</h5>
 				</section>
-				<section data-background-video="assets/mixt.mp4">
-					<h3 style="color:black;">MIxT network visualization</h3>
+
+				<!-- Challenges large biological networks -->
+				<section data-background-image="assets/visualization_biological.png" data-background-opacity="0.15">
+					<h3>Challenges visualizing large biological networks</h3>
+					<ul>
+						<li>Information overload</li>
+						<li>High dimensionality</li>
+						<li>Interconnectivity</li>
+					</ul>
+				</section>
+
+				<!-- Challenges VR -->
+				<section data-background-image="assets/vr.jpeg" data-background-opacity="0.15">
+					<h3>Challenges visualizing large biological networks in Virtual Reality</h3>
+					<ul>
+						<li>Information overload</li>
+						<li>Understand scalability limitations</li>
+						<li>Performance requirements</li>
+					</ul>
+				</section>
+
+				<!-- Biological networks -->
+				<section data-background-image="assets/visualization_biological.png" data-background-opacity="0.15">
+					<h3>Bioilogical networks</h3>
+					<p><b>Nodes:</b> Genes</p>
+					<p><b>Edges:</b> Significant co-expression relationship</p>
+					<p><b>Other information:</b> Clusters for module membership, weights, distance between nodes, etc.</p>
+				</section>
+				<section data-background-video="assets/mixt.mp4" data-background-opacity="0.9">
+					<h3 style="color:white; background-color: rgba(0, 0, 0, 0.4); text-transform: none;">CASE STUDY: <b>MIxT</b></h3>
+				</section>
+
+				<!-- Methodology -->
+				<section>
+					<h3>Methodology</h3>
+					<ol>
+						<li>Build a prototype of a VR application</li>
+						<li>Scalability and performance evaluation</li>
+						<li>Interviews</li>
+					</ol>
 				</section>
 				<section>
-					Video about GeneNet VR
+					<h3>Our solution</h3>
 				</section>
-				<section>
-					Methodology
+
+				<!-- Implementation of GeneNet VR -->
+				<section data-background-color="white">
+					<div style="display:flex; align-items: center;">
+						<h3 style="color:black; margin-right: 80px; text-transform: none;">Implementation of GeneNet VR</h3>
+						<img style="width: 60%;" data-src="assets/architecture_design.png">
+					</div>
 				</section>
-				<section>
+
+				<!-- Particle systems to represent the nodes -->
+				<section data-background-image="assets/particles.png" data-background-opacity="0.3">
+					<h3>Particle system to represent the nodes</h3>
+					<ul>
+						<li>Native in Unity</li>
+						<li>Control over the position of each of the nodes</li>
+						<li>Easy to manipulate</li>
+						<li>Data from external files</li>
+						<li>Keep the information in a HashMap data type</li>
+					</ul>
+					<pre>
+						<code data-trim data-line-numbers>
+							<script type="text/template">
+Dictionary<string, ParticleSystem.Particle> particles;
+							</script>
+						</code>
+					</pre>
 				</section>
+
+				<!-- Lines to represent the edges -->
+				<section data-background-image="assets/lines.png" data-background-opacity="0.3">
+					<h3>Lines to represent the edges</h3>
+					<ul>
+						<li>Line Renderer component from Unity</li>
+						<li>It consists of 2 points in the 3D space</li>
+						<li>Prefab asset</li>
+						<li>Added and removed from the scene dynamically</li>
+					</ul>
+				</section>
+
+				<!-- Clusters -->
+				<section data-background-image="assets/clusters.png" data-background-opacity="0.3">
+					<h3>Representation of clusters</h3>
+					<ul>
+						<li>Using colors</li>
+						<li>Genes that are significally co-expressed</li>
+					</ul>
+					<pre>
+						<code data-trim data-line-numbers>
+							<script type="text/template">
+Vector3 avoid = particle.position - randomP.position;
+particle.position += avoid.normalized;
+Vector3 direction = particle2.position - particle.position;
+particle.position += direction.normalized;
+							</script>
+						</code>
+					</pre>
+				</section>
+
+				<!-- Other visual elements -->
+				<section data-background-image="assets/genenet_vr.png" data-background-opacity="0.3">
+					<h3>Other visual elements</h3>
+					<li>Texts for the node names</li>
+					<li>2-dimensional menu</li>
+				</section>
+
+				<!-- Interactions and controller inputs -->
+				<section data-background-color="white">
+					<div style="display:flex; align-items: center;">
+						<h3 style="color:black; margin-right: 80px; text-transform: none;">Interactions in GeneNet VR</h3>
+						<img style="width: 60%;" data-src="assets/oculus_quest_inputs.png">
+					</div>
+				</section>
+
+				<!-- Teleportation -->
+				<section data-background-image="assets/teleportation1.png" data-background-opacity="0.3">
+					<h3>Teleportation</h3>
+					<li>Locomotion solution</li>
+					<li>Move around the scene using the controllers</li>
+					<li>Solves object occlusion problem</li>
+				</section>
+
+				<!-- Snap rotation -->
+				<section data-background-image="assets/teleportation1.png" data-background-opacity="0.3">
+					<h3>Snap rotation</h3>
+					<li>Locomotion solution</li>
+					<li>Rotates the camera 45 degrees to the right or left</li>
+					<li>Black flash as a transition</li>
+					<li>Solves object occlusion problem</li>
+				</section>
+
+				<!-- Network translation -->
+				<section data-background-color="white">
+					<div style="display:flex; align-items: center;">
+						<h3 style="color:black; margin-right: 80px; text-transform: none;">Network translation</h3>
+						<img style="width: 60%;" data-src="assets/translation.png">
+					</div>
+				</section>
+
+				<!-- Network scaling -->
+				<section data-background-color="white">
+					<div style="display:flex; align-items: center;">
+						<h3 style="color:black; margin-right: 80px; text-transform: none;">Network scaling</h3>
+						<img style="width: 60%;" data-src="assets/scaling.png">
+					</div>
+				</section>
+
+				<!-- Node selection -->
+				<section data-background-color="white">
+					<div style="display:flex; align-items: center;">
+						<h3 style="color:black; margin-right: 80px; text-transform: none;">Node selection</h3>
+						<img style="width: 60%;" data-src="assets/select_node.png">
+					</div>
+				</section>
+
 			</div>
 		</div>
 
