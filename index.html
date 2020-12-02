@@ -50,6 +50,8 @@
 					<p><b>Edges:</b> Significant co-expression relationship</p>
 					<p><b>Other information:</b> Clusters for module membership, weights, distance between nodes, etc.</p>
 				</section>
+
+				<!-- MIxT example -->
 				<section data-background-video="assets/mixt.mp4" data-background-opacity="0.9">
 					<h3 style="color:white; background-color: rgba(0, 0, 0, 0.4); text-transform: none;">CASE STUDY: <b>MIxT</b></h3>
 				</section>
@@ -63,8 +65,10 @@
 						<li>Interviews</li>
 					</ol>
 				</section>
-				<section>
-					<h3>Our solution</h3>
+
+				<!-- Our solution -->
+				<section data-background-video="assets/geneNetVR_reelshow.mp4" data-background-opacity="0.9">
+					<h3 style="color:white; background-color: rgba(0, 0, 0, 0.4); text-transform: none;">Our solution: <b>GeneNet VR</b></h3>
 				</section>
 
 				<!-- Implementation of GeneNet VR -->
@@ -147,6 +151,14 @@ particle.position += direction.normalized;
 					<li>Solves object occlusion problem</li>
 				</section>
 
+				<!-- Teleportation -->
+				<section data-background-color="white">
+					<div style="display:flex; align-items: center;">
+						<h3 style="color:black; margin-right: 80px; text-transform: none;">Teleportation</h3>
+						<video style="width: 70%;" data-autoplay src="assets/teleportation_1.mp4" loop></video>
+					</div>
+				</section>
+
 				<!-- Snap rotation -->
 				<section data-background-image="assets/teleportation1.png" data-background-opacity="0.3">
 					<h3>Snap rotation</h3>
@@ -154,6 +166,14 @@ particle.position += direction.normalized;
 					<li>Rotates the camera 45 degrees to the right or left</li>
 					<li>Black flash as a transition</li>
 					<li>Solves object occlusion problem</li>
+				</section>
+
+				<!-- Snap rotation -->
+				<section data-background-color="white">
+					<div style="display:flex; align-items: center;">
+						<h3 style="color:black; margin-right: 80px; text-transform: none;">Snap rotation</h3>
+						<video style="width: 70%;" data-autoplay src="assets/snap_rotation.mp4" loop></video>
+					</div>
 				</section>
 
 				<!-- Network translation -->
@@ -169,6 +189,14 @@ particle.position += direction.normalized;
 					<div style="display:flex; align-items: center;">
 						<h3 style="color:black; margin-right: 80px; text-transform: none;">Network translation</h3>
 						<img style="width: 60%;" data-src="assets/network_translator.png">
+					</div>
+				</section>
+
+				<!-- Network translation -->
+				<section data-background-color="white">
+					<div style="display:flex; align-items: center;">
+						<h3 style="color:black; margin-right: 80px; text-transform: none;">Network translation</h3>
+						<video style="width: 70%;" data-autoplay src="assets/translate_network.mp4" loop></video>
 					</div>
 				</section>
 
@@ -188,11 +216,11 @@ particle.position += direction.normalized;
 					</div>
 				</section>
 
-				<!-- Node selection -->
+				<!-- Network scale -->
 				<section data-background-color="white">
 					<div style="display:flex; align-items: center;">
-						<h3 style="color:black; margin-right: 80px; text-transform: none;">Node selection</h3>
-						<img style="width: 60%;" data-src="assets/node_selection.png">
+						<h3 style="color:black; margin-right: 80px; text-transform: none;">Network scale</h3>
+						<video style="width: 70%;" data-autoplay src="assets/network_scale.mp4" loop></video>
 					</div>
 				</section>
 
@@ -204,11 +232,19 @@ particle.position += direction.normalized;
 					</div>
 				</section>
 
+				<!-- Node selection -->
+				<section data-background-color="white">
+					<div style="display:flex; align-items: center;">
+						<h3 style="color:black; margin-right: 80px; text-transform: none;">Node selection</h3>
+						<video style="width: 70%;" data-autoplay src="assets/node_selection.mp4" loop></video>
+					</div>
+				</section>
+
 				<!-- Node filtering -->
 				<section data-background-color="white">
 					<div style="display:flex; align-items: center;">
-						<h3 style="color:black; margin-right: 80px; text-transform: none;">Network filtering</h3>
-						<img style="width: 60%;" data-src="assets/filtering.png">
+						<h3 style="color:black; margin-right: 80px; text-transform: none;">Node filtering</h3>
+						<video style="width: 70%;" data-autoplay src="assets/node_filtering.mp4" loop></video>
 					</div>
 				</section>
 
@@ -223,8 +259,8 @@ particle.position += direction.normalized;
 				<!-- Morphing -->
 				<section data-background-color="white">
 					<div style="display:flex; align-items: center;">
-						<h3 style="color:black; margin-right: 80px; text-transform: none;">Network morphing</h3>
-						<img style="width: 60%;" data-src="assets/morph2.png">
+						<h3 style="color:black; margin-right: 80px; text-transform: none;">Morphing</h3>
+						<video style="width: 70%;" data-autoplay src="assets/network_morphing.mp4" loop></video>
 					</div>
 				</section>
 
@@ -234,6 +270,132 @@ particle.position += direction.normalized;
 						<h3 style="color:black; margin-right: 80px; text-transform: none;">Network morphing</h3>
 						<img style="width: 60%;" data-src="assets/network_morph.png">
 					</div>
+				</section>
+
+				<!-- Evaluation questions -->
+				<section>
+						<h3>Evaluation of GeneNet VR</h3>
+						<ol>
+							<li>For which interactions do we achieve the recommended FPS (72) for large biological networks?</li>
+							<li>What network properties influence the scalability?</li>
+							<li>Do we achieve the recommended FPS (72) for large biological networks when using the standalone Oculus Quest?</li>
+							<li>How do users perceive the visualization of large biological networks in GeneNet VR?</li>
+						</ol>
+				</section>
+
+				<!-- Oculus performance guidelines -->
+				<section>
+						<h3>Oculus' performance guidelines</h3>
+						<ul>
+							<li>72 FPS for Oculus Quest (required by Oculus)</li>
+							<li>50-100 draw calls per frame</li>
+							<li>50,000-100,000 triangles or vertices per frame</li>
+						</ul>
+				</section>
+
+				<!-- Translating the network meets the 72 FPS -->
+				<section>
+						<h3>Translating the network meets the 72 FPS</h3>
+						<table style="font-size: 36px;">
+							<thead>
+								<tr>
+									<th>Data size</th>
+									<th>0.25% avrg low</th>
+									<th>1% average low</th>
+									<th>Average</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>size</th>
+									<th>20.1</th>
+									<th>12.2</th>
+									<th>6.6</th>
+								</tr>
+								<tr>
+									<th>size/2</th>
+									<th>22</th>
+									<th>12.8</th>
+									<th>6.5</th>
+								</tr>
+								<tr>
+									<th>size/3</th>
+									<th>23.3</th>
+									<th>13.5</th>
+									<th>6.5</th>
+								</tr>
+							</tbody>
+						</table>
+				</section>
+
+				<!-- Scaling the network meets the 72 FPS -->
+				<section>
+						<h3>Scaling the network meets the 72 FPS</h3>
+						<table style="font-size: 36px;">
+							<thead>
+								<tr>
+									<th>Data size</th>
+									<th>0.25% avrg low</th>
+									<th>1% average low</th>
+									<th>Average</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>size</th>
+									<th>22.8</th>
+									<th>13.4</th>
+									<th>6.5</th>
+								</tr>
+								<tr>
+									<th>size/2</th>
+									<th>22.6</th>
+									<th>12.7</th>
+									<th>6.5</th>
+								</tr>
+								<tr>
+									<th>size/3</th>
+									<th>23</th>
+									<th>13.6</th>
+									<th>6.5</th>
+								</tr>
+							</tbody>
+						</table>
+				</section>
+
+				<!-- Selecting nodes the network meets the 72 FPS -->
+				<section>
+						<h3>Selecting nodes the network meets the 72 FPS</h3>
+						<table style="font-size: 36px;">
+							<thead>
+								<tr>
+									<th>Data size</th>
+									<th>0.25% avrg low</th>
+									<th>1% average low</th>
+									<th>Average</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>size</th>
+									<th>100</th>
+									<th>65.6</th>
+									<th>8.7</th>
+								</tr>
+								<tr>
+									<th>size/2</th>
+									<th>100</th>
+									<th>56.4</th>
+									<th>8.6</th>
+								</tr>
+								<tr>
+									<th>size/3</th>
+									<th>100</th>
+									<th>56.4</th>
+									<th>8.6</th>
+								</tr>
+							</tbody>
+						</table>
 				</section>
 
 			</div>
