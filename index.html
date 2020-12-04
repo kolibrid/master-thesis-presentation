@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>GeneNet VR</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -21,6 +21,11 @@
 				<section>
 					<h2>GeneNet VR: Large Biological Networks in Virtual Reality Using Inexpensive Hardware</h2>
 					<h5 style="font-weight: normal;">Álvaro Martínez Fernández</h5>
+				</section>
+
+				<!-- Introduction -->
+				<section>
+					<h2>Introduction</h2>
 				</section>
 
 				<!-- Challenges large biological networks -->
@@ -60,15 +65,19 @@
 				<section>
 					<h3>Methodology</h3>
 					<ol>
-						<li>Build a prototype of a VR application</li>
-						<li>Scalability and performance evaluation</li>
-						<li>Interviews</li>
+						<li>Built a prototype of a VR application</li>
+						<li>Evaluated scalability performance aspects</li>
+						<li>Interviews with researchers to obtain feedback</li>
 					</ol>
 				</section>
 
 				<!-- Our solution -->
 				<section data-background-video="assets/geneNetVR_reelshow.mp4" data-background-opacity="0.9">
 					<h3 style="color:white; background-color: rgba(0, 0, 0, 0.4); text-transform: none;">Our solution: <b>GeneNet VR</b></h3>
+				</section>
+
+				<section>
+					<h2>GeneNet VR</h2>
 				</section>
 
 				<!-- Implementation of GeneNet VR -->
@@ -104,6 +113,7 @@ Dictionary<string, ParticleSystem.Particle> particles;
 					<ul>
 						<li>Line Renderer component from Unity</li>
 						<li>It consists of 2 points in the 3D space</li>
+						<li>Data from external file</li>
 						<li>Prefab asset</li>
 						<li>Added and removed from the scene dynamically</li>
 					</ul>
@@ -149,6 +159,7 @@ particle.position += direction.normalized;
 					<li>Locomotion solution</li>
 					<li>Move around the scene using the controllers</li>
 					<li>Solves object occlusion problem</li>
+					<li>Black flash transition</li>
 				</section>
 
 				<!-- Teleportation -->
@@ -164,8 +175,7 @@ particle.position += direction.normalized;
 					<h3>Snap rotation</h3>
 					<li>Locomotion solution</li>
 					<li>Rotates the camera 45 degrees to the right or left</li>
-					<li>Black flash as a transition</li>
-					<li>Solves object occlusion problem</li>
+					<li>Black flash transition</li>
 				</section>
 
 				<!-- Snap rotation -->
@@ -219,7 +229,7 @@ particle.position += direction.normalized;
 				<!-- Network scale -->
 				<section data-background-color="white">
 					<div style="display:flex; align-items: center;">
-						<h3 style="color:black; margin-right: 80px; text-transform: none;">Network scale</h3>
+						<h3 style="color:black; margin-right: 80px; text-transform: none;">Network scaling</h3>
 						<video style="width: 70%;" data-autoplay src="assets/network_scale.mp4" loop></video>
 					</div>
 				</section>
@@ -272,9 +282,13 @@ particle.position += direction.normalized;
 					</div>
 				</section>
 
+				<section>
+					<h2>Evaluation</h2>
+				</section>
+
 				<!-- Evaluation questions -->
 				<section>
-						<h3>Evaluation of GeneNet VR</h3>
+						<h3>Evaluation questions</h3>
 						<ol>
 							<li>For which interactions do we achieve the recommended FPS (72) for large biological networks?</li>
 							<li>What network properties influence the scalability?</li>
@@ -293,6 +307,11 @@ particle.position += direction.normalized;
 						</ul>
 				</section>
 
+				<!-- Evaluation question 1 -->
+				<section>
+					<h3>1. For which interactions do we achieve the recommended FPS (72) for large biological networks?</h3>
+				</section>
+
 				<!-- Translating the network meets the 72 FPS -->
 				<section>
 						<h3>Translating the network meets the 72 FPS</h3>
@@ -300,8 +319,8 @@ particle.position += direction.normalized;
 							<thead>
 								<tr>
 									<th>Data size</th>
-									<th>0.25% avrg low</th>
-									<th>1% average low</th>
+									<th>0.25% avg. low</th>
+									<th>1% avg. low</th>
 									<th>Average</th>
 								</tr>
 							</thead>
@@ -326,6 +345,7 @@ particle.position += direction.normalized;
 								</tr>
 							</tbody>
 						</table>
+						<p style="color: white; font-size: 24px;">Table 1. Performance results in milliseconds when translating the network.</p>
 				</section>
 
 				<!-- Scaling the network meets the 72 FPS -->
@@ -335,8 +355,8 @@ particle.position += direction.normalized;
 							<thead>
 								<tr>
 									<th>Data size</th>
-									<th>0.25% avrg low</th>
-									<th>1% average low</th>
+									<th>0.25% avg. low</th>
+									<th>1% avg. low</th>
 									<th>Average</th>
 								</tr>
 							</thead>
@@ -361,6 +381,18 @@ particle.position += direction.normalized;
 								</tr>
 							</tbody>
 						</table>
+						<p style="color: white; font-size: 24px;">Table 2. Performance results in milliseconds for the scale the network interaction.</p>
+				</section>
+
+				<!-- Edge distribution -->
+				<section data-background-color="white">
+					<div style="display:flex; align-items: center;">
+						<h3 style="color:black; margin-right: 80px; text-transform: none;">Edge distribution</h3>
+						<div style="width: 60%;">
+							<img style="margin-bottom: 0;" data-src="assets/distribution_edges.png">
+							<p data-caption style="color: black; font-size: 16px; margin-top: 0;">Cumulative distribution of the number of edges in the blood dataset. etc The x-axis shows the number of edges and the y-axis shows the cumulative distribution.</p>
+						</div>
+					</div>
 				</section>
 
 				<!-- Selecting nodes the network meets the 72 FPS -->
@@ -370,8 +402,8 @@ particle.position += direction.normalized;
 							<thead>
 								<tr>
 									<th>Data size</th>
-									<th>0.25% avrg low</th>
-									<th>1% average low</th>
+									<th>0.25% avg. low</th>
+									<th>1% avg. low</th>
 									<th>Average</th>
 								</tr>
 							</thead>
@@ -396,6 +428,215 @@ particle.position += direction.normalized;
 								</tr>
 							</tbody>
 						</table>
+						<p style="color: white; font-size: 24px;">Table 3. Performance results in milliseconds for the select node interaction.</p>
+				</section>
+
+				<!-- Performance summary -->
+				<section data-background-color="white">
+					<div style="display:flex; align-items: center;">
+						<h3 style="color:black; margin-right: 80px; text-transform: none;">Performance summary</h3>
+						<div style="width: 60%;">
+							<img style="margin-bottom: 0;" data-src="assets/bar_graph_experiments.png">
+							<p data-caption style="color: black; font-size: 16px; margin-top: 0;">Bar graph showing a summary of the performance results for the 1% lowest average (7 frames with worst performance).</p>
+						</div>
+					</div>
+				</section>
+
+				<!-- Evaluation question 2 -->
+				<section>
+					<h3>2. What network properties influence the scalability?</h3>
+				</section>
+
+				<!-- Scatter plot -->
+				<section data-background-color="white">
+					<div style="display:flex; align-items: center;">
+						<h3 style="color:black; margin-right: 80px; text-transform: none;">Time to create the edges</h3>
+						<div style="width: 60%;">
+							<img style="margin-bottom: 0;" data-src="assets/number_edges_plot.png">
+							<p data-caption style="color: black; font-size: 16px; margin-top: 0;">Scatter plot showing the relation between the number of edges to render and the time that it takes to render for the blood dataset.</p>
+						</div>
+					</div>
+				</section>
+
+				<!-- Profiling selection node -->
+				<section data-background-color="white">
+					<div style="display:flex; align-items: center;">
+						<div>
+							<img style="margin-bottom: 0;" data-src="assets/profiler.png">
+							<p data-caption style="color: black; font-size: 16px; margin-top: 0;">Profiling the selection of the node ARGLU1(1607), which has the highest number of edges.</p>
+						</div>
+					</div>
+				</section>
+
+				<!-- Triangles profiler -->
+				<section data-background-color="white">
+					<div style="display:flex; align-items: center;">
+						<div>
+							<img style="margin-bottom: 0;" data-src="assets/triangles_profiler.png">
+							<p data-caption style="color: black; font-size: 16px; margin-top: 0;">35.2 thousand triangles in the scene when selecting the node ARGLU1, which has 1607 edges, the largest number in the blood dataset.</p>
+						</div>
+					</div>
+				</section>
+
+				<!-- Evaluation question 3 -->
+				<section>
+					<h3>3. Do we achieve the recommended FPS (72) for large biological networks when using the standalone Oculus Quest?</h3>
+				</section>
+
+				<!-- Oculus vs PC -->
+				<section data-background-color="white">
+					<div style="display:flex; align-items: center;">
+						<div>
+							<img style="margin-bottom: 0;" data-src="assets/oculus_pc_graph.png">
+							<p data-caption style="color: black; font-size: 16px; margin-top: 0;">Performance of GeneNet VR when visualizing the blood dataset running on a machine and on the Oculus Quest. The x-axis represents the frame number (like a timeline). The y-axis represents the amount of time in milliseconds that a particular frame took to render.</p>
+						</div>
+					</div>
+				</section>
+
+				<!-- Evaluation question 4 -->
+				<section>
+					<h3>4. How do users perceive the visualization of large biological networks in GeneNet VR?</h3>
+				</section>
+
+				<!-- Interview questions -->
+				<section>
+					<p>6 semi-structured interviews with research scientists</p>
+					<p>We asked 3 open-ended questions:</p>
+					<ul>
+						<li>How do you perceive the application?</li>
+						<li>How do you perceive the application for pattern finding?</li>
+						<li>What is missing in the application?</li>
+					</ul>
+				</section>
+
+				<!-- Respondents -->
+				<section>
+					<table style="font-size: 24px;">
+						<thead>
+							<tr>
+								<th>Respondent</th>
+								<th>Research field</th>
+								<th>Has used VR before?</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>1</th>
+								<th>Computer science and works with social networks</th>
+								<th>Owns an HTC Vive and uses on a regular basis</th>
+							</tr>
+							<tr>
+								<th>2</th>
+								<th>Clinical pharmacy and phar- macoepidemiology</th>
+								<th>Several times to play videogames</th>
+							</tr>
+							<tr>
+								<th>3</th>
+								<th>Pharmacoepidemiology. Has worked with drug networks</th>
+								<th>Has never used it</th>
+							</tr>
+							<tr>
+								<th>4</th>
+								<th>Biology. Has worked with gene co-expression networks</th>
+								<th>Has used it very little</th>
+							</tr>
+							<tr>
+								<th>5</th>
+								<th>Biology. Has worked with gene expression analysis</th>
+								<th>Has never used it</th>
+							</tr>
+							<tr>
+								<th>6</th>
+								<th>Biology. Has worked with GCN and biological networks</th>
+								<th>Has never used it</th>
+							</tr>
+						</tbody>
+					</table>
+					<p style="color: white; font-size: 24px;">Table 4. Information about the respondents.</p>
+				</section>
+
+				<!-- How do you perceive the application? -->
+				<section>
+					<h3>1. How do you perceive the application?</h3>
+				</section>
+
+				<!-- How do you perceive the application? -->
+				<section>
+					<h3>2. How do you perceive the application for pattern finding?</h3>
+				</section>
+
+				<!-- How do you perceive the application? -->
+				<section>
+					<h3>3. What is missing in the application?</h3>
+				</section>
+
+				<!-- Related work -->
+				<section>
+					<h2>Related work</h2>
+				</section>
+
+				<!-- Virtual Reality Chemical Space -->
+				<section data-background-color="white">
+					<div style="display:flex; align-items: center;">
+						<h3 style="color:black; margin-right: 20px; text-transform: none;">Virtual Reality Chemical Space</h3>
+						<div>
+							<img style="margin-bottom: 0;" data-src="assets/drugbank.png">
+							<p data-caption style="color: black; font-size: 16px; margin-top: 0;">Screenshot from Virtual Reality Chemical Space.</p>
+						</div>
+					</div>
+				</section>
+
+				<!-- BioVR -->
+				<section data-background-color="white">
+					<div style="display:flex; align-items: center;">
+						<h3 style="color:black; margin-right: 20px; text-transform: none;">BioVR</h3>
+						<div>
+							<img style="margin-bottom: 0;" data-src="assets/biovr.png">
+							<p data-caption style="color: black; font-size: 16px; margin-top: 0;">Screenshot from BioVR.</p>
+						</div>
+					</div>
+				</section>
+
+				<!-- BioVR -->
+				<section data-background-color="white">
+					<div style="display:flex; align-items: center;">
+						<h3 style="color:black; margin-right: 20px; text-transform: none;">CellexaVR</h3>
+						<div>
+							<img style="margin-bottom: 0;" data-src="assets/cellexavr.png">
+							<p data-caption style="color: black; font-size: 16px; margin-top: 0;">Screenshot from CellexaVR. Two users using CellexalVR at the same time. The head models were taken from NASA.</p>
+						</div>
+					</div>
+				</section>
+
+				<!-- bigTop -->
+				<section data-background-color="white">
+					<div style="display:flex; align-items: center;">
+						<h3 style="color:black; margin-right: 20px; text-transform: none;">BigTop</h3>
+						<div>
+							<img style="margin-bottom: 0;" data-src="assets/bigtop.png">
+							<p data-caption style="color: black; font-size: 16px; margin-top: 0;">Screenshot from BigTop where a node is selected.</p>
+						</div>
+					</div>
+				</section>
+
+				<!-- Conclusions -->
+				<section>
+					<h2>Conclusion</h2>
+				</section>
+
+				<!-- Future work -->
+				<section>
+					<h2>Future work</h2>
+				</section>
+
+				<!-- Thank you. -->
+				<section>
+					<h2>Thank you!</h2>
+				</section>
+
+				<!-- Questions? -->
+				<section data-background-color="white">
+					<h2 style="color: black;">Questions?</h2>
 				</section>
 
 			</div>
@@ -405,6 +646,7 @@ particle.position += direction.normalized;
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
@@ -414,6 +656,14 @@ particle.position += direction.normalized;
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script>
+			$( document ).ready(function() {
+				$("p[data-caption]").each(function(index, value) {
+  				let text = $(this).text()
+					$(this).text('Figure ' + index + ': ' + text)
+				});
 			});
 		</script>
 	</body>
