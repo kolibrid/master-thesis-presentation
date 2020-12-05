@@ -377,6 +377,18 @@ particle.position += direction.normalized;
 						</ol>
 				</section>
 
+				<!-- Benchmark -->
+				<section>
+						<h3>Benchmark</h3>
+						<ul>
+							<li>Benchmark in Unity</li>
+							<li>The experiments are coded so that they can be repeated</li>
+							<li>We ran the experiments 4 times</li>
+							<li>We used the blood dataset</li>
+							<li>Experiments ran on the PC except for one experiment on the Oculus Quest</li>
+						</ul>
+				</section>
+
 				<!-- Oculus performance guidelines -->
 				<section>
 						<h3>Oculus' performance guidelines</h3>
@@ -387,9 +399,39 @@ particle.position += direction.normalized;
 						</ul>
 				</section>
 
+				<!-- 72 FPS -->
+				<section>
+						<h3>72 FPS</h3>
+						<ul>
+							<li>The interactions need to be smooth</li>
+							<li>We measured the frame time</li>
+							<li>13.9 milliseconds is our reference</li>
+						</ul>
+				</section>
+
 				<!-- Evaluation question 1 -->
 				<section>
 					<h3>1. For which interactions do we achieve the recommended FPS (72) for large biological networks?</h3>
+				</section>
+
+				<!-- Evaluation question 1 -->
+				<section>
+						<h3>Experiments description</h3>
+						<ul>
+							<li>The experiments were ran on the PC</li>
+							<li>Evaluated network translation, network scaling and select node</li>
+							<li>Measured 700 frames and calculated several averages</li>
+						</ul>
+				</section>
+
+				<!-- Translating the network -->
+				<section>
+						<h3>Translating the network experiment</h3>
+						<ul>
+							<li>The network is moved around in the scene</li>
+							<li>Sine function in the y-axis</li>
+							<li>Linear function in the z-axis</li>
+						</ul>
 				</section>
 
 				<!-- Translating the network meets the 72 FPS -->
@@ -428,6 +470,15 @@ particle.position += direction.normalized;
 						<p style="color: white; font-size: 24px;">Table 1. Performance results in milliseconds when translating the network.</p>
 				</section>
 
+				<!-- Scaling the network -->
+				<section>
+						<h3>Scaling the network experiment</h3>
+						<ul>
+							<li>The network is scaled up and down</li>
+							<li>Sine function to update the size of the network</li>
+						</ul>
+				</section>
+
 				<!-- Scaling the network meets the 72 FPS -->
 				<section>
 						<h3>Scaling the network meets the 72 FPS</h3>
@@ -464,6 +515,16 @@ particle.position += direction.normalized;
 						<p style="color: white; font-size: 24px;">Table 2. Performance results in milliseconds for the scale the network interaction.</p>
 				</section>
 
+				<!-- Node selection -->
+				<section>
+						<h3>Node selection experiment</h3>
+						<ul>
+							<li>We select 7 nodes every 100 frames</li>
+							<li>Each node can have a different number of edges to generate</li>
+							<li>We just measure the time to generate the edges</li>
+						</ul>
+				</section>
+
 				<!-- Edge distribution -->
 				<section data-background-color="white">
 					<div style="display:flex; align-items: center;">
@@ -473,6 +534,12 @@ particle.position += direction.normalized;
 							<p data-caption style="color: black; font-size: 16px; margin-top: 0;">Cumulative distribution of the number of edges in the blood dataset. etc The x-axis shows the number of edges and the y-axis shows the cumulative distribution.</p>
 						</div>
 					</div>
+				</section>
+
+				<!-- Node selection -->
+				<section>
+						<h3>Selected nodes</h3>
+						<p>TGFBR3 (1), EPSTI1(11), SMNDC1(90), HNRNPH3(290), ANGEL2(586), ACTR6(756), ARGLU1(1607)</p>
 				</section>
 
 				<!-- Selecting nodes the network meets the 72 FPS -->
@@ -514,7 +581,7 @@ particle.position += direction.normalized;
 				<!-- Performance summary -->
 				<section data-background-color="white">
 					<div style="display:flex; align-items: center;">
-						<h3 style="color:black; margin-right: 80px; text-transform: none;">Performance summary</h3>
+						<h3 style="color:black; margin-right: 80px; text-transform: none;">Discussion</h3>
 						<div style="width: 60%;">
 							<img style="margin-bottom: 0;" data-src="assets/bar_graph_experiments.png">
 							<p data-caption style="color: black; font-size: 16px; margin-top: 0;">Bar graph showing a summary of the performance results for the 1% lowest average (7 frames with worst performance).</p>
@@ -525,6 +592,13 @@ particle.position += direction.normalized;
 				<!-- Evaluation question 2 -->
 				<section>
 					<h3>2. What network properties influence the scalability?</h3>
+				</section>
+
+				<!-- Network properties -->
+				<section>
+					<h3>Network properties that influence the scalability</h3>
+					<li>Number of nodes</li>
+					<li>Number of edges</li>
 				</section>
 
 				<!-- Scatter plot -->
@@ -558,9 +632,26 @@ particle.position += direction.normalized;
 					</div>
 				</section>
 
+				<!-- Discussion -->
+				<section>
+					<h3>Discussion</h3>
+					<li>Hard to determine if the number of edges can have an impact in the scalability</li>
+					<li>User larger networks to evaluate the number of nodes</li>
+					<li>Improve the generation of the edges</li>
+				</section>
+
 				<!-- Evaluation question 3 -->
 				<section>
 					<h3>3. Do we achieve the recommended FPS (72) for large biological networks when using the standalone Oculus Quest?</h3>
+				</section>
+
+				<!-- Network properties -->
+				<section>
+					<h3>Experiment setup</h3>
+					<li>Measure time frame for 70 frames</li>
+					<li>Experiment run in PC and Oculus Quest</li>
+					<li>Network translation, network scaling and node selection</li>
+					<li>Nodes selected: TGFBR3 (1), EPSTI1(11), SMNDC1(90), HNRNPH3(290), ANGEL2(586), and ACTR6(756)</li>
 				</section>
 
 				<!-- Oculus vs PC -->
@@ -573,6 +664,15 @@ particle.position += direction.normalized;
 					</div>
 				</section>
 
+				<!-- Discussion -->
+				<section>
+					<h3>Discussion</h3>
+					<li>We reach the 72 FPS</li>
+					<li>When selecting the nodes, the time can increase</li>
+					<li>Evaluate bigger networks</li>
+					<li>Improve generation of the edges</li>
+				</section>
+
 				<!-- Evaluation question 4 -->
 				<section>
 					<h3>4. How do users perceive the visualization of large biological networks in GeneNet VR?</h3>
@@ -582,11 +682,11 @@ particle.position += direction.normalized;
 				<section>
 					<p>6 semi-structured interviews with research scientists</p>
 					<p>We asked 3 open-ended questions:</p>
-					<ul>
+					<ol>
 						<li>How do you perceive the application?</li>
 						<li>How do you perceive the application for pattern finding?</li>
 						<li>What is missing in the application?</li>
-					</ul>
+					</ol>
 				</section>
 
 				<!-- Respondents -->
@@ -636,18 +736,31 @@ particle.position += direction.normalized;
 				</section>
 
 				<!-- How do you perceive the application? -->
-				<section>
+				<!-- <section>
 					<h3>1. How do you perceive the application?</h3>
-				</section>
+					<li>GeneNet VR shows some advantages for the visualization of large biological networks.</li>
+					<li>Respondents 4, 5, and 6 highlighted that the interactions are intuitive and easy to learn.</li>
+					<li>No performance issues</li>
+					<li>Improve generation of the edges</li>
+				</section> -->
 
 				<!-- How do you perceive the application? -->
-				<section>
+				<!-- <section>
 					<h3>2. How do you perceive the application for pattern finding?</h3>
-				</section>
+				</section> -->
+
+				<!-- How do you perceive the application? -->
+				<!-- <section>
+					<h3>3. What is missing in the application?</h3>
+				</section> -->
 
 				<!-- How do you perceive the application? -->
 				<section>
-					<h3>3. What is missing in the application?</h3>
+					<h3>Discussion</h3>
+					<!-- <li>GeneNet VR shows some advantages for the visualization of large biological networks.</li>
+					<li>Respondents 4, 5, and 6 highlighted that the interactions are intuitive and easy to learn.</li>
+					<li>No performance issues</li>
+					<li>Improve generation of the edges</li> -->
 				</section>
 
 				<!-- Related work -->
@@ -743,7 +856,7 @@ particle.position += direction.normalized;
 			$( document ).ready(function() {
 				$("p[data-caption]").each(function(index, value) {
   				let text = $(this).text()
-					$(this).text('Figure ' + index + ': ' + text)
+					$(this).text('Figure ' + (index + 1) + ': ' + text)
 				});
 			});
 		</script>
