@@ -757,10 +757,21 @@ particle.position += direction.normalized;
 				<!-- How do you perceive the application? -->
 				<section>
 					<h3>Discussion</h3>
-					<!-- <li>GeneNet VR shows some advantages for the visualization of large biological networks.</li>
-					<li>Respondents 4, 5, and 6 highlighted that the interactions are intuitive and easy to learn.</li>
-					<li>No performance issues</li>
-					<li>Improve generation of the edges</li> -->
+					<li>GeneNet VR is a helpful visualization tool for large biological networks</li>
+					<li>Easy to use and to learn even for users new to VR</li>
+					<li>Smooth performance and interactions</li>
+					<li>The standalone Oculus Quest can be preferred by some users</li>
+					<li>Interest in visualizing their biological datasets</li>
+				</section>
+
+				<section>
+					<h3>Feedback</h3>
+					<li>Show all the interconnected node names</li>
+					<li>Possibility to change the network layout</li>
+					<li>Search functionality to search for node names</li>
+					<li>Possibility to "pin" nodes</li>
+					<li>Possibility to use other pathway libraries</li>
+					<li>Improve the distance feeling</li>
 				</section>
 
 				<!-- Related work -->
@@ -777,6 +788,15 @@ particle.position += direction.normalized;
 							<p data-caption style="color: black; font-size: 16px; margin-top: 0;">Screenshot from Virtual Reality Chemical Space.</p>
 						</div>
 					</div>
+					<aside class="notes">
+				     VR application for the interactive exploration of chemical space populated by Drugbank compounds.
+						 Developed in Unity using C# and the VRTK library.
+						 They use a particle system to render the particles of the chemical space.
+						 In order to reduce motion sickness, they have introduced a floor in the form of a grid acting as a static frame of reference.
+						 Drawback that they found: VR headsets are not so comfortable as well as often-occurring eye strain and virtual reality sickness.
+						 They also conclude that the application of VR in chemistry has more potential in the fields of education and training than for the current state of technology.
+						 The tools for chemistry need to be further evaluated whether they should be extended to VR.
+				  </aside>
 				</section>
 
 				<!-- BioVR -->
@@ -788,6 +808,11 @@ particle.position += direction.normalized;
 							<p data-caption style="color: black; font-size: 16px; margin-top: 0;">Screenshot from BioVR.</p>
 						</div>
 					</div>
+					<aside class="notes">
+				     BioVR is an interactive VR platform for integrated visual analysis of DNA/RNA protein structures
+						 It is built in Unity and using C#.
+						 BioVR they use the hands for the interactions rather than the controllers. This can be very attractive and it could have worked very well for GeneNet VR.
+				  </aside>
 				</section>
 
 				<!-- BioVR -->
@@ -799,6 +824,12 @@ particle.position += direction.normalized;
 							<p data-caption style="color: black; font-size: 16px; margin-top: 0;">Screenshot from CellexaVR. Two users using CellexalVR at the same time. The head models were taken from NASA.</p>
 						</div>
 					</div>
+					<aside class="notes">
+				     CellexalVR is a virtual reality environment for the visualization and analy- sis of single-cell RNAseq experiments that help researchers understand their data.
+						 The system is divided into two parts: the first one consists of the VR interface and the second is an R package called cellexalvrR that does back- end calculations.
+						 It allows a multi-user mode via the Photon Unity Networking.
+						 "Ghost mode", one of the users only interacts, the other observes.
+				  </aside>
 				</section>
 
 				<!-- bigTop -->
@@ -810,6 +841,13 @@ particle.position += direction.normalized;
 							<p data-caption style="color: black; font-size: 16px; margin-top: 0;">Screenshot from BigTop where a node is selected.</p>
 						</div>
 					</div>
+					<aside class="notes">
+				     BigTop is a visualization framework in VR for the rendering of Manhattan plots in three dimensions
+						 BigTop is built in JavaScript with React and A-Frame, for the web browsers. It can also be rendered in any commercially available VR headsets
+						 BigTop allows the user to select a node in order to obtain more information
+						 To move around the scene in BigTop the user can take steps (in the VR version) or using the arrow keys from the keyboard.
+						 In BigNet VR we implement more complex locomotion and interaction techniques. Also we visualize networks, which also have edges.
+				  </aside>
 				</section>
 
 				<!-- Conclusions -->
@@ -817,9 +855,58 @@ particle.position += direction.normalized;
 					<h2>Conclusion</h2>
 				</section>
 
+				<!-- Conclusions -->
+				<section>
+					<h3>Conclusions</h3>
+					<li>Prototype of a VR application for the visualization of large biological networks</li>
+					<li>Implementation for the Oculus Quest, an inexpensive VR headset</li>
+					<li>7-8 milliseconds average for the evaluated interactions (limit is in 13.9 ms)</li>
+					<li>Performance around 30% slower on the Oculus Quest, but still meeting the 72 FPS</li>
+					<li>Positive feedback from the interviews</li>
+				</section>
+
+				<!-- Contributions -->
+				<section>
+					<h3>Contributions</h3>
+					<iframe width="100%" height="500px" autoplay src="https://www.youtube.com/embed/N4QDZiZqVNY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<a href="https://www.youtube.com/watch?v=N4QDZiZqVNY">https://www.youtube.com/watch?v=N4QDZiZqVNY</a>
+				</section>
+
+				<!-- Contributions -->
+				<section>
+					<h3>Contributions</h3>
+					<img data-src="assets/repository.png">
+					<a href="https://github.com/kolibrid/GeneNet-VR">https://github.com/kolibrid/GeneNet-VR</a>
+				</section>
+
 				<!-- Future work -->
 				<section data-background-image="assets/frontpage_bottom.png">
 					<h2>Future work</h2>
+				</section>
+
+				<!-- Future work -->
+				<section>
+					<h3>Future work</h3>
+					<li>Issues list in the GitHub repository</li>
+					<li>Improve generation of the edges for performance purposes</li>
+					<li>Improve the UI elements and representation of the nodes and network</li>
+					<li>Highlight the nodes that are selected and the interconnected nodes</li>
+					<li>Experiments with larger datasets and for the Oculus Quest</li>
+				</section>
+
+				<!-- Future work -->
+				<section>
+					<h3>New requirements from the interviews</h3>
+					<li>Show names of the interconnected nodes</li>
+					<li>Show the weight information</li>
+					<li>Rotate the network with the controllers</li>
+					<li>Build a notebook interface to prepare the datasets</li>
+				</section>
+
+				<!-- App future work -->
+				<section>
+					<h3>Future work</h3>
+					<img data-src="assets/ui_future.png">
 				</section>
 
 				<!-- Thank you. -->
