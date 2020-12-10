@@ -151,14 +151,14 @@
 				</section>
 
 				<!-- Creation of the network -->
-				<section data-background-image="assets/lines.png" data-background-opacity="0.3">
+				<!-- <section data-background-image="assets/lines.png" data-background-opacity="0.3">
 					<h3>Creation of the network</h3>
 					<ul>
 						<li>Use of external CSV files</li>
 						<li>Store the nodes and relationships in hash maps data structures</li>
 						<li>Particle system to represent the nodes</li>
 					</ul>
-				</section>
+				</section> -->
 
 				<!-- Particle systems to represent the nodes -->
 				<section data-background-image="assets/particles.png" data-background-opacity="0.3">
@@ -167,15 +167,8 @@
 						<li>Native in Unity</li>
 						<li>Control over the position of each of the nodes</li>
 						<li>Easy to manipulate</li>
-						<li>Store the information in a HashMap data type</li>
+						<li>Store the information in hash maps</li>
 					</ul>
-					<pre>
-						<code data-trim data-line-numbers>
-							<script type="text/template">
-Dictionary<string, ParticleSystem.Particle> particles;
-							</script>
-						</code>
-					</pre>
 				</section>
 
 				<!-- Lines to represent the edges -->
@@ -191,27 +184,18 @@ Dictionary<string, ParticleSystem.Particle> particles;
 				</section>
 
 				<!-- Clusters -->
-				<section data-background-image="assets/clusters.png" data-background-opacity="0.3">
+				<!-- <section data-background-image="assets/clusters.png" data-background-opacity="0.3">
 					<h3>Representation of clusters</h3>
 					<ul>
 						<li>Genes that are significally co-expressed</li>
 						<li>The algorithm is applied when the networks are being initialized</li>
 					</ul>
-					<!-- <pre>
-						<code data-trim data-line-numbers>
-							<script type="text/template">
-Vector3 avoid = particle.position - randomP.position;
-particle.position += avoid.normalized;
-Vector3 direction = particle2.position - particle.position;
-particle.position += direction.normalized;
-							</script>
-						</code>
-					</pre> -->
-				</section>
+				</section> -->
 
 				<!-- Other visual elements -->
 				<section data-background-image="assets/genenet_vr.png" data-background-opacity="0.3">
 					<h3>Other visual elements</h3>
+					<li>Clusters</li>
 					<li>Texts for the node names</li>
 					<li>2-dimensional menu</li>
 				</section>
@@ -224,39 +208,6 @@ particle.position += direction.normalized;
 					</div>
 				</section>
 
-				<!-- Teleportation -->
-				<section data-background-image="assets/teleportation1.png" data-background-opacity="0.3">
-					<h3>Teleportation</h3>
-					<li>Locomotion solution</li>
-					<li>Move around the scene using the controllers</li>
-					<li>Solves object occlusion problem</li>
-					<li>Black flash transition</li>
-				</section>
-
-				<!-- Teleportation -->
-				<section data-background-color="white">
-					<div style="display:flex; align-items: center;">
-						<h3 style="color:black; margin-right: 80px; text-transform: none;">Teleportation</h3>
-						<video style="width: 70%;" data-autoplay src="assets/teleportation_1.mp4" loop></video>
-					</div>
-				</section>
-
-				<!-- Snap rotation -->
-				<section data-background-image="assets/teleportation1.png" data-background-opacity="0.3">
-					<h3>Snap rotation</h3>
-					<li>Locomotion solution</li>
-					<li>Rotates the camera 45 degrees to the right or left</li>
-					<li>Black flash transition</li>
-				</section>
-
-				<!-- Snap rotation -->
-				<section data-background-color="white">
-					<div style="display:flex; align-items: center;">
-						<h3 style="color:black; margin-right: 80px; text-transform: none;">Snap rotation</h3>
-						<video style="width: 70%;" data-autoplay src="assets/snap_rotation.mp4" loop></video>
-					</div>
-				</section>
-
 				<!-- Network translation -->
 				<section>
 					<h3>Network translation</h3>
@@ -266,20 +217,20 @@ particle.position += direction.normalized;
 				</section>
 
 				<!-- Network translation -->
-				<section data-background-color="white">
+				<!-- <section data-background-color="white">
 					<div style="display:flex; align-items: center;">
 						<h3 style="color:black; margin-right: 80px; text-transform: none;">Network translation</h3>
 						<img style="width: 80%;" data-src="assets/translation.png">
 					</div>
-				</section>
+				</section> -->
 
 				<!-- Network translation -->
-				<section data-background-color="white">
+				<!-- <section data-background-color="white">
 					<div style="display:flex; align-items: center;">
 						<h3 style="color:black; margin-right: 80px; text-transform: none;">Network translation</h3>
 						<img style="width: 80%;" data-src="assets/network_translator.png">
 					</div>
-				</section>
+				</section> -->
 
 				<!-- Network translation -->
 				<section data-background-color="white">
@@ -290,27 +241,27 @@ particle.position += direction.normalized;
 				</section>
 
 				<!-- Network scaling -->
-				<section>
+				<!-- <section>
 					<h3>Network scaling</h3>
 					<li>Scale the network up and down</li>
 					<li>A zoom in and zoom out effect</li>
-				</section>
+				</section> -->
 
 				<!-- Network scaling -->
-				<section data-background-color="white">
+				<!-- <section data-background-color="white">
 					<div style="display:flex; align-items: center;">
 						<h3 style="color:black; margin-right: 80px; text-transform: none;">Network scaling</h3>
 						<img style="width: 60%;" data-src="assets/scaling.png">
 					</div>
-				</section>
+				</section> -->
 
 				<!-- Network scaling -->
-				<section data-background-color="white">
+				<!-- <section data-background-color="white">
 					<div style="display:flex; align-items: center;">
 						<h3 style="color:black; margin-right: 80px; text-transform: none;">Network scaling</h3>
 						<img style="width: 60%;" data-src="assets/network_zoom.png">
 					</div>
-				</section>
+				</section> -->
 
 				<!-- Network scaling -->
 				<section data-background-color="white">
@@ -329,12 +280,12 @@ particle.position += direction.normalized;
 				</section>
 
 				<!-- Node selection -->
-				<section data-background-color="white">
+				<!-- <section data-background-color="white">
 					<div style="display:flex; align-items: center;">
 						<h3 style="color:black; margin-right: 80px; text-transform: none;">Node selection</h3>
 						<img style="width: 60%;" data-src="assets/select_node.png">
 					</div>
-				</section>
+				</section> -->
 
 				<!-- Node selection -->
 				<section data-background-color="white">
@@ -344,12 +295,52 @@ particle.position += direction.normalized;
 					</div>
 				</section>
 
+				<!-- Teleportation -->
+				<!-- <section data-background-image="assets/teleportation1.png" data-background-opacity="0.3">
+					<h3>Teleportation</h3>
+					<li>Locomotion solution</li>
+					<li>Move around the scene using the controllers</li>
+					<li>Solves object occlusion problem</li>
+					<li>Black flash transition</li>
+				</section> -->
+
+				<!-- Teleportation -->
+				<!-- <section data-background-color="white">
+					<div style="display:flex; align-items: center;">
+						<h3 style="color:black; margin-right: 80px; text-transform: none;">Teleportation</h3>
+						<video style="width: 70%;" data-autoplay src="assets/teleportation_1.mp4" loop></video>
+					</div>
+				</section> -->
+
+				<!-- Snap rotation -->
+				<!-- <section data-background-image="assets/teleportation1.png" data-background-opacity="0.3">
+					<h3>Snap rotation</h3>
+					<li>Locomotion solution</li>
+					<li>Rotates the camera 45 degrees to the right or left</li>
+					<li>Black flash transition</li>
+				</section> -->
+
+				<!-- Snap rotation -->
+				<!-- <section data-background-color="white">
+					<div style="display:flex; align-items: center;">
+						<h3 style="color:black; margin-right: 80px; text-transform: none;">Snap rotation</h3>
+						<video style="width: 70%;" data-autoplay src="assets/snap_rotation.mp4" loop></video>
+					</div>
+				</section> -->
+
+				<!-- Locomotion solutions -->
+				<section data-background-image="assets/teleportation1.png" data-background-opacity="0.3">
+					<h3>Locomotion solutions</h3>
+					<li>Teleportation</li>
+					<li>Snap rotation</li>
+				</section>
+
 				<!-- Node filtering -->
-				<section>
+				<!-- <section>
 					<h3>Node filtering</h3>
 					<li>2-dimensional menu</li>
 					<li>Use of checkboxes to filter</li>
-				</section>
+				</section> -->
 
 				<!-- Node filtering -->
 				<section data-background-color="white">
@@ -376,12 +367,12 @@ particle.position += direction.normalized;
 				</section>
 
 				<!-- Morphing -->
-				<section data-background-color="white">
+				<!-- <section data-background-color="white">
 					<div style="display:flex; align-items: center;">
 						<h3 style="color:black; margin-right: 80px; text-transform: none;">Network morphing</h3>
 						<img style="width: 60%;" data-src="assets/network_morph.png">
 					</div>
-				</section>
+				</section> -->
 
 				<section data-background-image="assets/frontpage_bottom.png">
 					<h2>Evaluation</h2>
@@ -405,8 +396,8 @@ particle.position += direction.normalized;
 							<li>Benchmark in Unity</li>
 							<li>The experiments are coded so that they can be repeated</li>
 							<li>We ran the experiments 4 times</li>
-							<li>We used the blood dataset</li>
-							<li>Experiments ran on the PC except for one experiment on the Oculus Quest</li>
+							<li>We used the blood dataset from MIxT</li>
+							<li>Experiments run on the PC except for one experiment on the Oculus Quest (3rd question)</li>
 						</ul>
 				</section>
 
@@ -439,24 +430,35 @@ particle.position += direction.normalized;
 				<section>
 						<h3>Experiments description</h3>
 						<ul>
-							<li>The experiments were ran on the PC</li>
+							<li>The experiments were ran on the PC's hardware</li>
 							<li>Evaluated network translation, network scaling and select node</li>
-							<li>Measured 700 frames and calculated several averages</li>
+							<li>Measured time frame for 700 frames</li>
+							<li>Used 3 network sizes (whole, half and a third)</li>
+							<li>Average of all the time frames and average of 1% and 0,25% worst time frames</li>
+						</ul>
+				</section>
+
+				<section>
+						<h3>Experiments description</h3>
+						<ul>
+							<li>Use of sine and linear functions to translate and scale the network interaction experiments</li>
+							<li>Edge creation for several nodes in node selection interaction experiment</li>
+							<li>Representative averages: all time frames and 1% worst time frames</li>
 						</ul>
 				</section>
 
 				<!-- Translating the network -->
-				<section>
+				<!-- <section>
 						<h3>Translating the network experiment</h3>
 						<ul>
 							<li>The network is moved around in the scene</li>
 							<li>Sine function in the y-axis</li>
 							<li>Linear function in the z-axis</li>
 						</ul>
-				</section>
+				</section> -->
 
 				<!-- Translating the network meets the 72 FPS -->
-				<section>
+				<!-- <section>
 						<h3>Translating the network meets the 72 FPS</h3>
 						<table style="font-size: 36px;">
 							<thead>
@@ -489,19 +491,19 @@ particle.position += direction.normalized;
 							</tbody>
 						</table>
 						<p style="color: white; font-size: 24px;">Table 1. Performance results in milliseconds when translating the network.</p>
-				</section>
+				</section> -->
 
 				<!-- Scaling the network -->
-				<section>
+				<!-- <section>
 						<h3>Scaling the network experiment</h3>
 						<ul>
 							<li>The network is scaled up and down</li>
 							<li>Sine function to update the size of the network</li>
 						</ul>
-				</section>
+				</section> -->
 
 				<!-- Scaling the network meets the 72 FPS -->
-				<section>
+				<!-- <section>
 						<h3>Scaling the network meets the 72 FPS</h3>
 						<table style="font-size: 36px;">
 							<thead>
@@ -534,17 +536,17 @@ particle.position += direction.normalized;
 							</tbody>
 						</table>
 						<p style="color: white; font-size: 24px;">Table 2. Performance results in milliseconds for the scale the network interaction.</p>
-				</section>
+				</section> -->
 
 				<!-- Node selection -->
-				<section>
+				<!-- <section>
 						<h3>Node selection experiment</h3>
 						<ul>
 							<li>We select 7 nodes every 100 frames</li>
 							<li>Each node can have a different number of edges to generate</li>
 							<li>We just measure the time to generate the edges</li>
 						</ul>
-				</section>
+				</section> -->
 
 				<!-- Edge distribution -->
 				<section data-background-color="white">
@@ -558,13 +560,13 @@ particle.position += direction.normalized;
 				</section>
 
 				<!-- Node selection -->
-				<section>
+				<!-- <section>
 						<h3>Selected nodes</h3>
 						<p>TGFBR3 (1), EPSTI1(11), SMNDC1(90), HNRNPH3(290), ANGEL2(586), ACTR6(756), ARGLU1(1607)</p>
-				</section>
+				</section> -->
 
 				<!-- Selecting nodes the network meets the 72 FPS -->
-				<section>
+				<!-- <section>
 						<h3>Selecting nodes the network meets the 72 FPS</h3>
 						<table style="font-size: 36px;">
 							<thead>
@@ -597,12 +599,12 @@ particle.position += direction.normalized;
 							</tbody>
 						</table>
 						<p style="color: white; font-size: 24px;">Table 3. Performance results in milliseconds for the select node interaction.</p>
-				</section>
+				</section> -->
 
 				<!-- Performance summary -->
 				<section data-background-color="white">
 					<div style="display:flex; align-items: center;">
-						<h3 style="color:black; margin-right: 80px; text-transform: none;">Discussion</h3>
+						<h3 style="color:black; margin-right: 80px; text-transform: none;">Results</h3>
 						<div style="width: 60%;">
 							<img style="margin-bottom: 0;" data-src="assets/bar_graph_experiments.png">
 							<p data-caption style="color: black; font-size: 16px; margin-top: 0;">Bar graph showing a summary of the performance results for the 1% lowest average (7 frames with worst performance).</p>
@@ -634,24 +636,24 @@ particle.position += direction.normalized;
 				</section>
 
 				<!-- Profiling selection node -->
-				<section data-background-color="white">
+				<!-- <section data-background-color="white">
 					<div style="display:flex; align-items: center;">
 						<div>
 							<img style="margin-bottom: 0;" data-src="assets/profiler.png">
 							<p data-caption style="color: black; font-size: 16px; margin-top: 0;">Profiling the selection of the node ARGLU1(1607), which has the highest number of edges.</p>
 						</div>
 					</div>
-				</section>
+				</section> -->
 
 				<!-- Triangles profiler -->
-				<section data-background-color="white">
+				<!-- <section data-background-color="white">
 					<div style="display:flex; align-items: center;">
 						<div>
 							<img style="margin-bottom: 0;" data-src="assets/triangles_profiler.png">
 							<p data-caption style="color: black; font-size: 16px; margin-top: 0;">35.2 thousand triangles in the scene when selecting the node ARGLU1, which has 1607 edges, the largest number in the blood dataset.</p>
 						</div>
 					</div>
-				</section>
+				</section> -->
 
 				<!-- Discussion -->
 				<section>
