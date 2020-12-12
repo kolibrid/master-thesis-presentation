@@ -43,6 +43,36 @@
 					<h2>Introduction</h2>
 				</section>
 
+				<!-- MIxT example -->
+				<section data-background-video="assets/mixt.mp4" data-background-video-loop data-background-opacity="0.9">
+					<h3 style="margin-bottom: 0;color:white; background-color: rgba(0, 0, 0, 0.4); text-transform: none;">
+						<span>CASE STUDY: <b>MIxT</b></span>
+						<br>
+						<span style="font-size: 18px;">https://mixt-tumor-stroma.bci.mcgill.ca/network</span>
+					</h3>
+					<aside class="notes">
+						The Matched Interaction Across Tissues (MIxT) is a system developed by UiT and Concordia University for exploring and comparing transcriptional profiles from two or more matched tissues across individuals.
+						This system is implemented as a web application and it has a 2-dimensional visualization tool to explore biological networks.
+						The system has some visualization issues that we focus on improving in our VR protorype.
+						The networks from MIxT that we use in our case study are also known as gene co-expression networks (GCN) in biology. They are undirected graphs; meaning that the nodes can be connected together with bidirectional edges. In a GCN, the nodes represent genes and an edge between two nodes represents a significant co-expression relationship.
+						3.1, the nodes are in the networks are also organized in clusters and colors. Each cluster corresponds to a module, which is a subgraph where the genes are highly connected and where these genes are part of a common biological process that causes many interactions among themselves.
+					</aside>
+				</section>
+
+				<section data-background-image="assets/visualization_biological.png" data-background-opacity="0.15">
+					<h3>Biological networks from MIxT</h3>
+					<p>2 datasets: blood and biopsy with biological information from BC patients</p>
+					<p>Blood dataset (largest one) has 2693 nodes and one of nodes has 1607 edges (max number in both datasets)</p>
+				</section>
+
+				<!-- Our solution -->
+				<section data-background-video="assets/geneNetVR_reelshow.mp4" data-background-video-loop data-background-opacity="0.9">
+					<h3 style="color:white; background-color: rgba(0, 0, 0, 0.4); text-transform: none;"><b>GeneNet VR</b>
+						<br>
+						<span style="font-size: 18px;">https://github.com/kolibrid/GeneNet-VR</span>
+					</h3>
+				</section>
+
 				<!-- Evolution network biology -->
 				<section data-background-color="white">
 					<div style="display:flex; align-items: center;">
@@ -57,13 +87,13 @@
 					<small style="color: black; font-size: 14px; margin-top: 50px;">[1] Georgios A. Pavlopoulos et al. “Visualizing genome and systems biology: technologies, tools, implementation techniques and trends, past, present and future.” In: GigaScience 4.1 (2015). doi: 10.1186/s13742-015-0077-2.</small>
 				</section>
 
-				<!-- MIxT example -->
-				<section data-background-video="assets/mixt.mp4" data-background-video-loop data-background-opacity="0.9">
-					<h3 style="margin-bottom: 0;color:white; background-color: rgba(0, 0, 0, 0.4); text-transform: none;">
-						<span>CASE STUDY: <b>MIxT</b></span>
-						<br>
-						<span style="font-size: 18px;">https://mixt-tumor-stroma.bci.mcgill.ca/network</span>
-					</h3>
+				<!-- Vitual Reality -->
+				<section data-background-image="assets/vr.jpeg" data-background-opacity="0.15">
+					<h3>Virtual Reality</h3>
+					<p>3-dimensional space</p>
+					<p>Immersive</p>
+					<p>Very interactive</p>
+					<p>Advantages in visualization</p>
 				</section>
 
 				<!-- Challenges large biological networks -->
@@ -81,39 +111,31 @@
 				</section> -->
 
 				<!-- Biological networks -->
-				<section data-background-image="assets/visualization_biological.png" data-background-opacity="0.15">
+				<!-- <section data-background-image="assets/visualization_biological.png" data-background-opacity="0.15">
 					<h3>Biological networks from MIxT</h3>
 					<p><b>Nodes:</b> Genes</p>
 					<p><b>Edges:</b> Significant co-expression relationship between 2 nodes</p>
 					<p><b>Clusters for module membership:</b> clusters of genes that have a similar function or involve in a common biological process</p>
-				</section>
-
-				<section data-background-image="assets/visualization_biological.png" data-background-opacity="0.15">
-					<h3>Biological networks from MIxT</h3>
-					<p>2 datasets: blood and biopsy with biological information from BC patients</p>
-					<p>Blood dataset (largest one) has 2693 nodes and one of nodes has 1607 edges (max number in both datasets)</p>
-				</section>
-
-				<!-- Our solution -->
-				<section data-background-video="assets/geneNetVR_reelshow.mp4" data-background-video-loop data-background-opacity="0.9">
-					<h3 style="color:white; background-color: rgba(0, 0, 0, 0.4); text-transform: none;">Our solution: <b>GeneNet VR</b></h3>
-					<aside class="notes">
-						The Matched Interaction Across Tissues (MIxT) is a system developed by UiT and Concordia University for exploring and comparing transcriptional profiles from two or more matched tissues across individuals.
-						This system is implemented as a web application and it has a 2-dimensional visualization tool to explore biological networks.
-						The system has some visualization issues that we focus on improving in our VR protorype.
-						The networks from MIxT that we use in our case study are also known as gene co-expression networks (GCN) in biology. They are undirected graphs; meaning that the nodes can be connected together with bidirectional edges. In a GCN, the nodes represent genes and an edge between two nodes represents a significant co-expression relationship.
-						3.1, the nodes are in the networks are also organized in clusters and colors. Each cluster corresponds to a module, which is a subgraph where the genes are highly connected and where these genes are part of a common biological process that causes many interactions among themselves.
-					</aside>
-				</section>
+				</section> -->
 
 				<!-- Related work solutions -->
-				<section data-background-image="assets/visualization_biological.png" data-background-opacity="0.15">
+				<section data-background-image="assets/cellexavr.png" data-background-opacity="0.15">
 					<h3>Previous work</h3>
 					<ul>
-						<li>BioVR</li>
-						<li>BigTop</li>
-						<li>CellexaVR</li>
+						<li>BioVR[2]</li>
+						<li>BigTop[3]</li>
+						<li>CellexaVR[4]</li>
 					</ul>
+
+					<div>
+						<small style="font-size: 14px; margin-top: 50px;">
+							[2] Jimmy F Zhang et al. “BioVR: a platform for virtual reality assisted biological data integration and visualization.” In: (2018). doi: 10.1101/307769<br>
+							[3] Samuel T. Westreich et al. “BigTop: A Three-Dimensional Virtual Reality tool for GWAS Visualization.” In: (2019). doi: 10.1101/650176<br />
+							[4] Oscar Legetth et al. “CellexalVR: A virtual reality platform for the visualisation and analysis of single-cell gene expression data.” In: bioRxiv (2019). doi: 10.1101/329102
+						</small>
+
+					</div>
+
 				</section>
 
 				<!-- Oculus Quest -->
@@ -138,11 +160,14 @@
 
 				<!-- Challenges large biological networks -->
 				<section data-background-image="assets/visualization_biological.png" data-background-opacity="0.15">
-					<h3>We overcome these problems by providing the following solutions:</h3>
+					<h3>Contributions</h3>
 					<ul>
-						<li>Visualization system in VR</li>
+						<li>GeneNet VR: Prototype of a VR application for the Oculus Quest</li>
+						<li>Use case using real large biological networks</li>
+						<li>Performance and scalability evaluation</li>
+						<li>The system achieves 72 FPS and scales well for the used network sizes</li>
+						<li>Interviews with research scientists to obtain feedback</li>
 						<li>Design and implementation guidelines based on the evaluation results</li>
-						<li>Implementation for the Oculus Quest</li>
 					</ul>
 				</section>
 
