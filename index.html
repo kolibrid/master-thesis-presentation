@@ -53,9 +53,9 @@
 					<aside class="notes">
 						The Matched Interaction Across Tissues (MIxT) is a system developed by UiT and Concordia University for exploring and comparing transcriptional profiles from two or more matched tissues across individuals.
 						This system is implemented as a web application and it has a 2-dimensional visualization tool to explore biological networks.
-						The system has some visualization issues that we focus on improving in our VR protorype.
-						The networks from MIxT that we use in our case study are also known as gene co-expression networks (GCN) in biology. They are undirected graphs; meaning that the nodes can be connected together with bidirectional edges. In a GCN, the nodes represent genes and an edge between two nodes represents a significant co-expression relationship.
-						3.1, the nodes are in the networks are also organized in clusters and colors. Each cluster corresponds to a module, which is a subgraph where the genes are highly connected and where these genes are part of a common biological process that causes many interactions among themselves.
+						Gene co-expression networks (GCN) in biology. They are undirected graphs.
+						Significant co-expression relationship between 2 nodes
+						Clusters for module membership: clusters of genes that have a similar function or involve in a common biological process
 					</aside>
 				</section>
 
@@ -110,31 +110,35 @@
 				  </aside>
 				</section> -->
 
-				<!-- Biological networks -->
-				<!-- <section data-background-image="assets/visualization_biological.png" data-background-opacity="0.15">
-					<h3>Biological networks from MIxT</h3>
-					<p><b>Nodes:</b> Genes</p>
-					<p><b>Edges:</b> Significant co-expression relationship between 2 nodes</p>
-					<p><b>Clusters for module membership:</b> clusters of genes that have a similar function or involve in a common biological process</p>
-				</section> -->
-
 				<!-- Related work solutions -->
 				<section data-background-image="assets/cellexavr.png" data-background-opacity="0.15">
 					<h3>Previous work</h3>
 					<ul>
-						<li>BioVR[2]</li>
-						<li>BigTop[3]</li>
-						<li>CellexaVR[4]</li>
+						<li><b>BioVR</b>[2]: visual analysis of DNA/RNA protein structures</li>
+						<li><b>CellexaVR</b>[3]: visualization of single-cell RNAseq</li>
+						<li><b>BigTop</b>[4]: rendering of Manhattan plots in three dimensions</li>
 					</ul>
 
 					<div>
 						<small style="font-size: 14px; margin-top: 50px;">
 							[2] Jimmy F Zhang et al. “BioVR: a platform for virtual reality assisted biological data integration and visualization.” In: (2018). doi: 10.1101/307769<br>
-							[3] Samuel T. Westreich et al. “BigTop: A Three-Dimensional Virtual Reality tool for GWAS Visualization.” In: (2019). doi: 10.1101/650176<br />
-							[4] Oscar Legetth et al. “CellexalVR: A virtual reality platform for the visualisation and analysis of single-cell gene expression data.” In: bioRxiv (2019). doi: 10.1101/329102
+							[3] Oscar Legetth et al. “CellexalVR: A virtual reality platform for the visualisation and analysis of single-cell gene expression data.” In: bioRxiv (2019). doi: 10.1101/329102<br>
+							[4] Samuel T. Westreich et al. “BigTop: A Three-Dimensional Virtual Reality tool for GWAS Visualization.” In: (2019). doi: 10.1101/650176
 						</small>
-
 					</div>
+
+					<aside class="notes">
+				     BioVR is an interactive VR platform built in Unity for integrated visual analysis of DNA/RNA protein structures. Use of hand tracking for the interactions rather than the controllers. Researchers tend to understand data more quickly in VR environments than in conventional 2D and 3D desktop visualization. --------------
+
+						 CellexalVR is a virtual reality environment for the visualization and analysis of single-cell RNAseq experiments that help researchers understand their data.
+						 The system is divided into two parts: the first one consists of the VR interface and the second is an R package called cellexalvrR that does back- end calculations.
+						 It allows a multi-user mode via the Photon Unity Networking with "Ghost mode", one of the users only interacts, the other observes. -------------
+
+						 BigTop is a visualization framework in VR for the rendering of Manhattan plots in three dimensions
+						 BigTop is built in JavaScript with React and A-Frame, for the web browsers. It can also be rendered in any commercially available VR headsets
+						 BigTop allows the user to select a node in order to obtain more information
+						 To move around the scene in BigTop the user can take steps (in the VR version) or using the arrow keys from the keyboard.
+				  </aside>
 
 				</section>
 
@@ -179,10 +183,12 @@
 				<section data-background-color="white">
 					<div style="display:flex; align-items: center;">
 						<h3 style="color:black; margin-right: 80px; text-transform: none;">Implementation of GeneNet VR</h3>
-						<img style="width: 60%;" data-src="assets/architecture_design.png">
+						<div>
+							<img data-src="assets/architecture_design.png">
+							<p data-caption style="color: black; font-size: 16px; margin-top: 0;">Architecture and design of GeneNet VR.</p>
+						</div>
 					</div>
 				</section>
-
 
 				<!-- Particle systems to represent the nodes -->
 				<section data-background-image="assets/particles.png" data-background-opacity="0.3">
@@ -222,7 +228,10 @@
 				<section data-background-color="white">
 					<div style="display:flex; align-items: center;">
 						<h3 style="color:black; margin-right: 80px; text-transform: none;">Interactions in GeneNet VR</h3>
-						<img style="width: 60%;" data-src="assets/oculus_quest_inputs.png">
+						<div>
+							<img data-src="assets/oculus_quest_inputs.png">
+							<p data-caption style="color: black; font-size: 16px; margin-top: 0;">Mapping of the Oculus Quest controllers for the different actions imple- mented in GeneNet VR.</p>
+						</div>
 					</div>
 				</section>
 
@@ -231,14 +240,17 @@
 					<h3>Network translation</h3>
 					<li>The user can move the network with the right controller</li>
 					<li>Have control over the position of the network</li>
-					<li>Visualize the netwowrk from above or below</li>
+					<li>Visualize the network from above or below</li>
 				</section>
 
 				<!-- Network translation -->
 				<section data-background-color="white">
 					<div style="display:flex; align-items: center;">
 						<h3 style="color:black; margin-right: 80px; text-transform: none;">Network translation</h3>
-						<video style="width: 70%;" data-autoplay src="assets/translate_network.mp4" loop></video>
+						<div>
+							<video data-autoplay src="assets/translate_network.mp4" loop></video>
+							<p data-caption style="color: black; font-size: 16px; margin-top: 0;">Example of the network translation interaction in GeneNet VR.</p>
+						</div>
 					</div>
 				</section>
 
@@ -246,7 +258,10 @@
 				<section data-background-color="white">
 					<div style="display:flex; align-items: center;">
 						<h3 style="color:black; margin-right: 80px; text-transform: none;">Network scaling</h3>
-						<video style="width: 70%;" data-autoplay src="assets/network_scale.mp4" loop></video>
+						<div>
+							<video data-autoplay src="assets/network_scale.mp4" loop></video>
+							<p data-caption style="color: black; font-size: 16px; margin-top: 0;">Example of the network scaling interaction in GeneNet VR.</p>
+						</div>
 					</div>
 				</section>
 
@@ -263,7 +278,10 @@
 				<section data-background-color="white">
 					<div style="display:flex; align-items: center;">
 						<h3 style="color:black; margin-right: 80px; text-transform: none;">Node selection</h3>
-						<video style="width: 70%;" data-autoplay src="assets/node_selection.mp4" loop></video>
+						<div>
+							<video data-autoplay src="assets/node_selection.mp4" loop></video>
+							<p data-caption style="color: black; font-size: 16px; margin-top: 0;">Example of the node selection interaction in GeneNet VR.</p>
+						</div>
 					</div>
 				</section>
 
@@ -278,7 +296,10 @@
 				<section data-background-color="white">
 					<div style="display:flex; align-items: center;">
 						<h3 style="color:black; margin-right: 80px; text-transform: none;">Node filtering</h3>
-						<video style="width: 70%;" data-autoplay src="assets/node_filtering.mp4" loop></video>
+						<div>
+							<video data-autoplay src="assets/node_filtering.mp4" loop></video>
+							<p data-caption style="color: black; font-size: 16px; margin-top: 0;">Example of the node filtering interaction in GeneNet VR.</p>
+						</div>
 					</div>
 				</section>
 
@@ -294,7 +315,10 @@
 				<section data-background-color="white">
 					<div style="display:flex; align-items: center;">
 						<h3 style="color:black; margin-right: 80px; text-transform: none;">Morphing</h3>
-						<video style="width: 70%;" data-autoplay src="assets/network_morphing.mp4" loop></video>
+						<div>
+							<video data-autoplay src="assets/network_morphing.mp4" loop></video>
+							<p data-caption style="color: black; font-size: 16px; margin-top: 0;">Example of the morphing interaction in GeneNet VR.</p>
+						</div>
 					</div>
 				</section>
 
@@ -339,7 +363,7 @@
 						<h3>72 FPS</h3>
 						<ul>
 							<li>We measured the frame time</li>
-							<li>Frametime tells you how long each frame takes to render</li>
+							<li>The time frame tells you how long each frame takes to render</li>
 							<li>The interactions need to be smooth</li>
 							<li>13.9 milliseconds is our reference</li>
 						</ul>
@@ -358,7 +382,7 @@
 							<li>Evaluated network translation, network scaling and select node interactions</li>
 							<li>Measured the time frame of 700 frames for each experiment</li>
 							<li>Used 3 network sizes (whole, half and a third)</li>
-							<li>Ccalculated the average of all the time frames and the average of 1% and 0,25% worst time frames</li>
+							<li>Calculated the average of all the time frames and the average of 1% and 0,25% worst time frames</li>
 						</ul>
 				</section>
 
@@ -372,7 +396,7 @@
 				</section>
 
 				<!-- Edge distribution -->
-				<section data-background-color="white">
+				<!-- <section data-background-color="white">
 					<div style="display:flex; align-items: center;">
 						<h3 style="color:black; margin-right: 80px; text-transform: none;">Edge distribution</h3>
 						<div style="width: 60%;">
@@ -380,13 +404,13 @@
 							<p data-caption style="color: black; font-size: 16px; margin-top: 0;">Cumulative distribution of the number of edges in the blood dataset. etc The x-axis shows the number of edges and the y-axis shows the cumulative distribution.</p>
 						</div>
 					</div>
-				</section>
+				</section> -->
 
 				<!-- Node selection -->
-				<section>
+				<!-- <section>
 						<h3>Selected nodes</h3>
 						<p>TGFBR3 (1), EPSTI1(11), SMNDC1(90), HNRNPH3(290), ANGEL2(586), ACTR6(756), ARGLU1(1607)</p>
-				</section>
+				</section> -->
 
 				<!-- Results -->
 				<section>
@@ -534,6 +558,7 @@
 					<h3>Contributions</h3>
 					<iframe width="100%" height="500px" autoplay src="https://www.youtube.com/embed/N4QDZiZqVNY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					<a href="https://www.youtube.com/watch?v=N4QDZiZqVNY">https://www.youtube.com/watch?v=N4QDZiZqVNY</a>
+					<p data-caption style="font-size: 16px; margin-top: 0;">Video contribution of GeneNet VR.</p>
 				</section>
 
 				<!-- Contributions -->
@@ -541,6 +566,7 @@
 					<h3>Contributions</h3>
 					<img data-src="assets/repository.png">
 					<a href="https://github.com/kolibrid/GeneNet-VR">https://github.com/kolibrid/GeneNet-VR</a>
+					<p data-caption style="font-size: 16px; margin-top: 0;">Screenshot from the repository on GitHub where GeneNet VR is hosted.</p>
 				</section>
 
 				<!-- Future work -->
@@ -570,7 +596,10 @@
 				<!-- App future work -->
 				<section>
 					<h3>Future work</h3>
-					<img data-src="assets/ui_future.png">
+					<div>
+						<img style="width:70%;" data-src="assets/ui_future.png">
+						<p data-caption style="font-size: 16px; margin-top: 0;">Design of a UI for GeneNet VR.</p>
+					</div>
 				</section>
 
 				<!-- Thank you. -->
